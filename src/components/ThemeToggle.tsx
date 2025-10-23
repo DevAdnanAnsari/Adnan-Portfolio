@@ -7,7 +7,7 @@ export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
 
   // Get actual applied theme (resolve system theme)
-  const isDark = theme === "dark" || 
+  const isDark = theme === "dark" ||
     (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
 
   const toggleTheme = () => {
@@ -23,13 +23,13 @@ export function ThemeToggle() {
     >
       <motion.div
         initial={false}
-        animate={{ rotate: isDark ? 0 : 180 }}
+        animate={{ rotate: isDark ? 180 : 0 }}
         transition={{ duration: 0.3 }}
       >
         {isDark ? (
-          <Moon className="h-4 w-4" />
-        ) : (
           <Sun className="h-4 w-4" />
+        ) : (
+          <Moon className="h-4 w-4" />
         )}
       </motion.div>
       <span className="sr-only">Toggle theme</span>
