@@ -58,18 +58,16 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center gap-3">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="text-xl font-bold gradient-text cursor-pointer"
-              onClick={() => scrollToSection('home')}
-            >
-              MA
-            </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="text-xl font-bold gradient-text cursor-pointer flex items-center gap-3"
+            onClick={() => scrollToSection('home')}
+          >
+            MA
             <div className="hidden md:block">
               <ThemeToggle />
             </div>
-          </div>
+          </motion.div>
 
           <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
