@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   const [displayText, setDisplayText] = useState("");
-  const fullText = "Backend Developer";
-  
+  const fullText = "Backend Specialist";
+
   useEffect(() => {
     let index = 0;
     const timer = setInterval(() => {
@@ -17,7 +17,7 @@ const Hero = () => {
         clearInterval(timer);
       }
     }, 100);
-    
+
     return () => clearInterval(timer);
   }, []);
 
