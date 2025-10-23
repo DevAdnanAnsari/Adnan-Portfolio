@@ -66,7 +66,9 @@ const Navigation = () => {
             >
               MA
             </motion.div>
-            <ThemeToggle />
+            <div className="hidden md:block">
+              <ThemeToggle />
+            </div>
           </div>
 
           <div className="hidden md:flex items-center gap-1">
@@ -93,9 +95,7 @@ const Navigation = () => {
           </div>
 
           <div className="md:hidden flex items-center gap-2">
-            <div className="md:hidden">
-              <ThemeToggle />
-            </div>
+            <ThemeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 text-muted-foreground hover:text-foreground transition-colors"
