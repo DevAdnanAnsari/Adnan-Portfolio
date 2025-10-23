@@ -19,7 +19,7 @@ export function ThemeToggle() {
       variant="ghost"
       size="icon"
       onClick={toggleTheme}
-      className="h-9 w-9 rounded-lg border border-border hover:bg-accent hover:text-accent-foreground"
+      className="h-9 w-9 rounded-lg border border-border md:hover:bg-accent md:hover:text-accent-foreground"
     >
       <motion.div
         initial={false}
