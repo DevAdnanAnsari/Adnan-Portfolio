@@ -58,7 +58,7 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Left side - Logo and theme toggle (desktop only) */}
+          {/* Left side - Logo only on mobile, Logo + Theme toggle on desktop */}
           <div className="flex items-center gap-3">
             <motion.div
               whileHover={{ scale: 1.05 }}
@@ -67,8 +67,8 @@ const Navigation = () => {
             >
               MA
             </motion.div>
-            {/* Theme toggle - desktop only */}
-            <div className="hidden md:block">
+            {/* Theme toggle - ONLY visible on desktop (md and above) */}
+            <div className="hidden md:flex">
               <ThemeToggle />
             </div>
           </div>
@@ -97,8 +97,8 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Right side - Theme toggle and burger menu (mobile only) */}
-          <div className="md:hidden flex items-center gap-2">
+          {/* Right side - Theme toggle and burger menu (ONLY on mobile) */}
+          <div className="flex md:hidden items-center gap-2">
             <ThemeToggle />
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
